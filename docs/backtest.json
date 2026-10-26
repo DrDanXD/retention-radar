@@ -1,0 +1,314 @@
+{
+  "Default scenario": {
+    "members": 1000,
+    "seed": 7,
+    "churn_rate_observed": 0.202,
+    "decision_days_before_renewal": 30,
+    "params": {
+      "churn_rate": 0.22,
+      "drift_strength": 1.0,
+      "drift_lead_days": [
+        40,
+        130
+      ],
+      "sync_rate": [
+        0.86,
+        0.98
+      ],
+      "travel_gaps_per_year": 1.6,
+      "travel_gap_days": [
+        4,
+        12
+      ],
+      "habit_baseline": [
+        55,
+        90
+      ],
+      "habit_noise": 9,
+      "habit_log_rate": 0.9,
+      "coach_msg_every_days": 9,
+      "reply_rate": [
+        0.78,
+        0.97
+      ],
+      "lab_every_days": 90,
+      "lab_completion": 0.92,
+      "call_every_days": [
+        28,
+        45
+      ],
+      "call_completion": 0.9,
+      "logins_per_week": [
+        0.5,
+        4.0
+      ],
+      "login_drop_in_drift": 0.25,
+      "nps_every_days": 90,
+      "nps_response_rate": 0.4,
+      "nps_mean": [
+        8.6,
+        7.7
+      ],
+      "value_usd": [
+        12000,
+        48000
+      ]
+    },
+    "results": [
+      {
+        "method": "Radar",
+        "precision": 0.965,
+        "recall": 0.411,
+        "flag_rate": 0.086,
+        "revenue_caught": 0.406,
+        "median_lead_days": 64.0,
+        "churners_caught_by_decision": 83,
+        "churners_total": 202
+      },
+      {
+        "method": "Logins",
+        "precision": 0.351,
+        "recall": 0.064,
+        "flag_rate": 0.037,
+        "revenue_caught": 0.067,
+        "median_lead_days": 71.0,
+        "churners_caught_by_decision": 13,
+        "churners_total": 202
+      },
+      {
+        "method": "NPS",
+        "precision": 0.436,
+        "recall": 0.218,
+        "flag_rate": 0.101,
+        "revenue_caught": 0.229,
+        "median_lead_days": 120.0,
+        "churners_caught_by_decision": 44,
+        "churners_total": 202
+      }
+    ],
+    "radar_threshold_sweep": [
+      {
+        "threshold": 10,
+        "precision": 0.423,
+        "recall": 0.98,
+        "flag_rate": 0.468
+      },
+      {
+        "threshold": 15,
+        "precision": 0.74,
+        "recall": 0.861,
+        "flag_rate": 0.235
+      },
+      {
+        "threshold": 20,
+        "precision": 0.852,
+        "recall": 0.797,
+        "flag_rate": 0.189
+      },
+      {
+        "threshold": 25,
+        "precision": 0.906,
+        "recall": 0.574,
+        "flag_rate": 0.128
+      },
+      {
+        "threshold": 30,
+        "precision": 0.965,
+        "recall": 0.411,
+        "flag_rate": 0.086
+      },
+      {
+        "threshold": 35,
+        "precision": 0.988,
+        "recall": 0.391,
+        "flag_rate": 0.08
+      },
+      {
+        "threshold": 40,
+        "precision": 1.0,
+        "recall": 0.356,
+        "flag_rate": 0.072
+      },
+      {
+        "threshold": 45,
+        "precision": 1.0,
+        "recall": 0.248,
+        "flag_rate": 0.05
+      },
+      {
+        "threshold": 50,
+        "precision": 1.0,
+        "recall": 0.238,
+        "flag_rate": 0.048
+      },
+      {
+        "threshold": 55,
+        "precision": 1.0,
+        "recall": 0.114,
+        "flag_rate": 0.023
+      },
+      {
+        "threshold": 60,
+        "precision": 1.0,
+        "recall": 0.069,
+        "flag_rate": 0.014
+      }
+    ]
+  },
+  "Subtle drift (strength 0.5)": {
+    "members": 1000,
+    "seed": 7,
+    "churn_rate_observed": 0.195,
+    "decision_days_before_renewal": 30,
+    "params": {
+      "churn_rate": 0.22,
+      "drift_strength": 0.5,
+      "drift_lead_days": [
+        40,
+        130
+      ],
+      "sync_rate": [
+        0.86,
+        0.98
+      ],
+      "travel_gaps_per_year": 1.6,
+      "travel_gap_days": [
+        4,
+        12
+      ],
+      "habit_baseline": [
+        55,
+        90
+      ],
+      "habit_noise": 9,
+      "habit_log_rate": 0.9,
+      "coach_msg_every_days": 9,
+      "reply_rate": [
+        0.78,
+        0.97
+      ],
+      "lab_every_days": 90,
+      "lab_completion": 0.92,
+      "call_every_days": [
+        28,
+        45
+      ],
+      "call_completion": 0.9,
+      "logins_per_week": [
+        0.5,
+        4.0
+      ],
+      "login_drop_in_drift": 0.25,
+      "nps_every_days": 90,
+      "nps_response_rate": 0.4,
+      "nps_mean": [
+        8.6,
+        7.7
+      ],
+      "value_usd": [
+        12000,
+        48000
+      ]
+    },
+    "results": [
+      {
+        "method": "Radar",
+        "precision": 0.9,
+        "recall": 0.185,
+        "flag_rate": 0.04,
+        "revenue_caught": 0.185,
+        "median_lead_days": 60.5,
+        "churners_caught_by_decision": 36,
+        "churners_total": 195
+      },
+      {
+        "method": "Logins",
+        "precision": 0.211,
+        "recall": 0.021,
+        "flag_rate": 0.019,
+        "revenue_caught": 0.023,
+        "median_lead_days": 78.0,
+        "churners_caught_by_decision": 4,
+        "churners_total": 195
+      },
+      {
+        "method": "NPS",
+        "precision": 0.4,
+        "recall": 0.185,
+        "flag_rate": 0.09,
+        "revenue_caught": 0.172,
+        "median_lead_days": 120,
+        "churners_caught_by_decision": 36,
+        "churners_total": 195
+      }
+    ],
+    "radar_threshold_sweep": [
+      {
+        "threshold": 10,
+        "precision": 0.381,
+        "recall": 0.903,
+        "flag_rate": 0.462
+      },
+      {
+        "threshold": 15,
+        "precision": 0.577,
+        "recall": 0.482,
+        "flag_rate": 0.163
+      },
+      {
+        "threshold": 20,
+        "precision": 0.708,
+        "recall": 0.323,
+        "flag_rate": 0.089
+      },
+      {
+        "threshold": 25,
+        "precision": 0.803,
+        "recall": 0.251,
+        "flag_rate": 0.061
+      },
+      {
+        "threshold": 30,
+        "precision": 0.9,
+        "recall": 0.185,
+        "flag_rate": 0.04
+      },
+      {
+        "threshold": 35,
+        "precision": 0.939,
+        "recall": 0.159,
+        "flag_rate": 0.033
+      },
+      {
+        "threshold": 40,
+        "precision": 1.0,
+        "recall": 0.154,
+        "flag_rate": 0.03
+      },
+      {
+        "threshold": 45,
+        "precision": 1.0,
+        "recall": 0.082,
+        "flag_rate": 0.016
+      },
+      {
+        "threshold": 50,
+        "precision": 1.0,
+        "recall": 0.072,
+        "flag_rate": 0.014
+      },
+      {
+        "threshold": 55,
+        "precision": 1.0,
+        "recall": 0.036,
+        "flag_rate": 0.007
+      },
+      {
+        "threshold": 60,
+        "precision": 1.0,
+        "recall": 0.026,
+        "flag_rate": 0.005
+      }
+    ]
+  }
+}
