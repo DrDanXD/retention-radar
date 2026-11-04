@@ -13,9 +13,10 @@ from retention_radar.models import (
     SignalHit,
     WearableSync,
 )
-from retention_radar.scoring import assess, assess_all, at_risk_value
+from retention_radar.scoring import DEFAULT_PROFILE, Profile, assess, assess_all, at_risk_value
 
 __all__ = [
+    "DEFAULT_PROFILE",
     "Band",
     "CoachCall",
     "HabitLog",
@@ -23,6 +24,7 @@ __all__ = [
     "Member",
     "MemberTimeline",
     "Message",
+    "Profile",
     "RiskAssessment",
     "SignalHit",
     "Thresholds",
